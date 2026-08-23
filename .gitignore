@@ -1,0 +1,16 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Tooling / caches
+.codegraph/
+.omo/
+node_modules/
+*.log
+
+# Local env
+.env
+.env.*
