@@ -1,11 +1,17 @@
+<div align="center">
+
+[![English](https://img.shields.io/badge/Language-English-blue?style=flat-square)](README.md) [![繁體中文](https://img.shields.io/badge/語言-繁體中文-green?style=flat-square)](README.zh-TW.md)
+
+</div>
+
 # MEDIA PRO — MediaSoundExtractor
 
 <p align="center">
   <img src="favicon.svg" alt="MEDIA PRO Logo" width="80" height="80">
   <br>
-  <strong>🎬 瀏覽器本地音訊擷取與轉檔工具 (FFmpeg.wasm)</strong>
+  <strong>🎬 In-Browser Local Audio Extraction & Conversion Tool (FFmpeg.wasm)</strong>
   <br>
-  <span>100% 本地運算 · 零伺服器上傳 · 極速隱私 · 支援 MP3 (128k) / WAV 雙格式</span>
+  <span>100% Client-Side Processing · Zero Server Upload · High-Speed & Privacy-First · Dual Format MP3 (128k) / WAV</span>
 </p>
 
 <p align="center">
@@ -17,82 +23,98 @@
 
 ---
 
-### 🔗 快速連結
+### 🔗 Quick Links
 
-- 🚀 **線上立即使用 (Live App - Netlify)**: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
-- 🌐 **產品介紹頁 (Landing Page - GitHub Pages)**: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
-- 💻 **GitHub 原始碼倉庫**: [https://github.com/HengWeiBin/MediaSoundExtractor](https://github.com/HengWeiBin/MediaSoundExtractor)
+- 🚀 **Live Web Application (Netlify)**:
+  - 🌐 Auto Language Routing: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
+  - 🇺🇸 English Version: [https://mediasoundextractor.netlify.app/en/](https://mediasoundextractor.netlify.app/en/)
+  - 🇹🇼 Traditional Chinese Version: [https://mediasoundextractor.netlify.app/zh/](https://mediasoundextractor.netlify.app/zh/)
+- 🌐 **Product Landing Page (GitHub Pages)**:
+  - 🌐 Auto Language Routing: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
+  - 🇺🇸 English Version: [https://hengweibin.github.io/MediaSoundExtractor/en/](https://hengweibin.github.io/MediaSoundExtractor/en/)
+  - 🇹🇼 Traditional Chinese Version: [https://hengweibin.github.io/MediaSoundExtractor/zh/](https://hengweibin.github.io/MediaSoundExtractor/zh/)
+- 💻 **GitHub Repository**: [https://github.com/HengWeiBin/MediaSoundExtractor](https://github.com/HengWeiBin/MediaSoundExtractor)
 
 ---
 
-一個純前端的音訊擷取工具：把拖曳進來的影片 / 音訊檔轉成 **MP3 (128k)** 或 **WAV**。整個應用程式只有一個 `index.html`，完全在瀏覽器內透過 [FFmpeg.wasm](https://ffmpegwasm.netlify.app/) 完成轉檔——**檔案不會上傳到任何伺服器**。
+**MediaSoundExtractor** is a pure client-side web application for extracting audio tracks from video and audio files directly inside your browser. It converts media into **MP3 (128 kbps)** or uncompressed **WAV** using [FFmpeg.wasm](https://ffmpegwasm.netlify.app/) v0.12. 
 
-參考同系列專案：[StickerMaker](https://github.com/HengWeiBin/StickerMaker)（同樣是零後端的瀏覽器工具）。
+**Zero server upload**: all media processing occurs locally within your browser using WebAssembly. Your files never leave your device.
 
-## ✨ 特色功能
+Companion project: [StickerMaker](https://github.com/HengWeiBin/StickerMaker) (another zero-backend, privacy-centric web tool).
 
-- 🎬 拖放上傳影片 / 音訊檔，批次排程任務
-- 🔁 一鍵切換輸出格式：MP3（128kbps）或 WAV
-- ⏱️ 即時進度條與任務狀態顯示
-- 🔒 100% 本地運算，媒體資料不離開瀏覽器
-- 🌐 多 CDN 容錯（unpkg → jsdelivr）載入 FFmpeg WASM 核心
+## ✨ Key Features
 
-## 🚀 快速開始
+- 🎬 **Drag & Drop Workflow**: Easily drop video/audio files for batch queue processing.
+- 🔁 **Dual Export Formats**: Instant toggle between MP3 (128 kbps CBR) and uncompressed WAV.
+- ⏱️ **Real-Time Progress Tracking**: Live progress bars, transcode phase indicator, and elapsed timer.
+- 🔒 **Absolute Privacy**: 100% in-browser processing via WebAssembly; zero network transfers of your media files.
+- 🌐 **Multi-CDN Failover**: Automatic fallback between unpkg and jsdelivr for high-availability FFmpeg core binary loading.
+- 🌍 **Bilingual & Locale-Aware**: Full English (`/en/`) and Traditional Chinese (`/zh/`) interfaces with automatic browser preference detection and manual language switcher.
+- 📦 **Zero-Build Architecture**: Vanilla HTML5 + ES Modules with no build step, no npm packages, and zero server-side runtime.
 
-### 前置需求
+## 🚀 Quick Start
 
-- 任一靜態伺服器（WebAssembly 與 Web Worker 無法在 `file://` 下運作），例如：
-  - `python -m http.server 8000`
-  - `npx serve .`
+### Prerequisites
 
-無需 Node.js 建置流程、無需 `npm install`——所有依賴皆由 CDN 提供。
+A modern web browser with WebAssembly support (Chrome, Edge, Firefox, Safari) and a local static HTTP server.
 
-### 啟動
+> **Note**: WebAssembly and Web Workers cannot run under the `file://` protocol due to browser security restrictions. The app must be served over HTTP or HTTPS.
+
+No Node.js build process or `npm install` is required — all dependencies are loaded directly via CDN.
+
+### Running Locally
 
 ```bash
-# 在專案根目錄
+# In the repository root
 python -m http.server 8000
+# or: npx serve .
 ```
 
-打開 http://localhost:8000 ，看到底部狀態列顯示 `System Ready.` 即可開始使用。
+Navigate to `http://localhost:8000` in your browser. Once the status bar displays `System Ready.` (after downloading the ~30MB FFmpeg WASM core on the first visit), the extractor is ready for use.
 
-> 首次載入會從公共 CDN 下載約 30MB 的 FFmpeg WASM 核心，需要網路連線。
+## 📖 How It Works
 
-## 📖 使用教學
+1. **Drop Files**: Drag and drop one or more audio or video files into the upload dropzone.
+2. **Select Target Format**: Choose **MP3** (128 kbps) or **WAV** in the format selector.
+3. **Automatic Conversion**: The queue processes items sequentially. Watch the live progress bar and status indicator.
+4. **Download**: Click **Download** once complete to save your extracted audio file.
 
-1. **拖放檔案**：將音訊 / 影片檔拖進丟放區
-2. **選擇格式**：切換 MP3 / WAV
-3. **等待轉換**：進度條即時更新
-4. **下載**：轉換完成後點擊下載
+## 🛠️ Tech Stack & Architecture
 
-## 🛠️ 技術棧
+- **Core Engine**: Plain JavaScript ES Modules (`js/app-core.js`) encapsulating FFmpeg lifecycle management, sequential task processing, and file system cleanup.
+- **Audio Transcoding**: [FFmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm) v0.12 (`@ffmpeg/ffmpeg@0.12.10` + `@ffmpeg/core@0.12.6`).
+- **Styling**: Tailwind CSS via Play CDN.
+- **Routing & i18n**: Physical directories (`/zh/` and `/en/`) with root client-side language negotiation in `index.html` via `localStorage` and `navigator.languages`.
 
-- 純 HTML + ES Modules（單一 `index.html`，無框架、無建置步驟）
-- [FFmpeg.wasm](https://github.com/ffmpegwasm/ffmpeg.wasm) v0.12（`@ffmpeg/ffmpeg@0.12.10` + `@ffmpeg/core@0.12.6`）
-- Tailwind CSS（Play CDN）
+### Engineering Highlights & Safeguards
 
-## 🚢 部署
+- **Worker Blob URL Patching**: To prevent cross-origin Worker restrictions on CDNs, `initFFmpegWithProvider()` fetches `worker.js` as text, rewrites relative imports to absolute CDN URLs, and injects it as an isolated Blob URL.
+- **Multi-CDN Failover**: Automatically tries unpkg first, falling back to jsdelivr if loading times out (25-second watchdog) or encounters network issues.
+- **Strict Sequential Queue**: Tasks are processed one by one to avoid saturating browser memory and ensure stability of the single-threaded WebAssembly runtime.
+- **WASM Memory Hygiene**: Input and output files in FFmpeg's virtual in-memory file system (MEMFS) are immediately unlinked (`ffmpeg.deleteFile`) after processing each item, and Blob URLs are explicitly revoked when tasks are cleared.
 
-這是純靜態網站，可直接部署到 Netlify / Vercel / GitHub Pages：
+## 🚢 Deployment
 
-| 設定 | 值 |
+MediaSoundExtractor is a 100% static application and can be hosted on any static hosting platform (Netlify, GitHub Pages, Vercel, Cloudflare Pages):
+
+| Setting | Value |
 | --- | --- |
-| Build command | （留空） |
-| Publish directory | `.`（repo 根目錄） |
+| **Build Command** | *(Leave blank)* |
+| **Publish Directory** | `.` (repository root) |
 
-或使用 Netlify CLI：
+Deploy via Netlify CLI:
 
 ```bash
 netlify deploy --prod --dir .
 ```
 
-## 📝 注意事項
+## 📝 Important Notes
 
-- 必須透過 HTTP(S) 存取；直接雙擊 `index.html`（`file://`）會顯示設定錯誤畫面
-- 大型檔案的轉換在瀏覽器記憶體內進行，過大的檔案可能受限於可用記憶體
-- 任務為嚴格序列處理（一次一個），以維持 WASM 記憶體穩定
+- **HTTP(S) Required**: Accessing `index.html` directly via `file://` will trigger an environment setup warning.
+- **Memory Limitations**: Conversions take place inside the browser's allocated memory. Processing exceptionally massive video files (multi-gigabyte) may be constrained by available device RAM.
+- **Sequential Processing**: Batch tasks run in strict sequence to guarantee WASM virtual memory stability.
 
-## 📄 授權
+## 📄 License
 
-本專案採用 [MIT License](LICENSE) 授權。
-
+This project is licensed under the [MIT License](LICENSE).
