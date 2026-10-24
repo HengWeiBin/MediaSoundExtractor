@@ -33,3 +33,17 @@ Serverless, single-file browser app: converts dropped audio/video files to MP3 (
 
 - Plain ES modules inline in HTML; no framework, no TypeScript. Keep it that way unless explicitly asked otherwise.
 - UI text and code comments are Traditional Chinese (zh-TW) — match that.
+
+## Agent skills
+
+### Issue tracker
+
+GitHub issues. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Canonical five-role vocabulary. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout (`GLOSSARY.md` + `docs/adr/`). See `docs/agents/domain.md`.
