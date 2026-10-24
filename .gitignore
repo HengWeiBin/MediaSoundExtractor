@@ -8,6 +8,7 @@ desktop.ini
 # Tooling / caches
 .codegraph/
 .omo/
+.netlify/
 node_modules/
 *.log
 
