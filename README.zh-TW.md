@@ -25,21 +25,13 @@
 
 ### 🔗 快速連結
 
-- 🚀 **線上立即使用 (Live App - Netlify)**:
-  - 🌐 自動語言導向: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
-  - 🇹🇼 繁體中文版: [https://mediasoundextractor.netlify.app/zh/](https://mediasoundextractor.netlify.app/zh/)
-  - 🇺🇸 英文版: [https://mediasoundextractor.netlify.app/en/](https://mediasoundextractor.netlify.app/en/)
-- 🌐 **產品介紹頁 (Landing Page - GitHub Pages)**:
-  - 🌐 自動語言導向: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
-  - 🇹🇼 繁體中文版: [https://hengweibin.github.io/MediaSoundExtractor/zh/](https://hengweibin.github.io/MediaSoundExtractor/zh/)
-  - 🇺🇸 英文版: [https://hengweibin.github.io/MediaSoundExtractor/en/](https://hengweibin.github.io/MediaSoundExtractor/en/)
+- 🚀 **線上立即使用 (Live App - Netlify)**: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
+- 🌐 **產品介紹頁 (Landing Page - GitHub Pages)**: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
 - 💻 **GitHub 原始碼倉庫**: [https://github.com/HengWeiBin/MediaSoundExtractor](https://github.com/HengWeiBin/MediaSoundExtractor)
 
 ---
 
 一個純前端的音訊擷取工具：把拖曳進來的影片 / 音訊檔轉成 **MP3 (128k)** 或 **WAV**。完全在瀏覽器內透過 [FFmpeg.wasm](https://ffmpegwasm.netlify.app/) 完成轉檔——**檔案不會上傳到任何伺服器**。
-
-參考同系列專案：[StickerMaker](https://github.com/HengWeiBin/StickerMaker)（同樣是零後端的瀏覽器工具）。
 
 ## ✨ 特色功能
 

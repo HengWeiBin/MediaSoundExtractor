@@ -25,14 +25,8 @@
 
 ### 🔗 Quick Links
 
-- 🚀 **Live Web Application (Netlify)**:
-  - 🌐 Auto Language Routing: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
-  - 🇺🇸 English Version: [https://mediasoundextractor.netlify.app/en/](https://mediasoundextractor.netlify.app/en/)
-  - 🇹🇼 Traditional Chinese Version: [https://mediasoundextractor.netlify.app/zh/](https://mediasoundextractor.netlify.app/zh/)
-- 🌐 **Product Landing Page (GitHub Pages)**:
-  - 🌐 Auto Language Routing: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
-  - 🇺🇸 English Version: [https://hengweibin.github.io/MediaSoundExtractor/en/](https://hengweibin.github.io/MediaSoundExtractor/en/)
-  - 🇹🇼 Traditional Chinese Version: [https://hengweibin.github.io/MediaSoundExtractor/zh/](https://hengweibin.github.io/MediaSoundExtractor/zh/)
+- 🚀 **Live Web Application (Netlify)**: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
+- 🌐 **Product Landing Page (GitHub Pages)**: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
 - 💻 **GitHub Repository**: [https://github.com/HengWeiBin/MediaSoundExtractor](https://github.com/HengWeiBin/MediaSoundExtractor)
 
 ---
@@ -40,8 +34,6 @@
 **MediaSoundExtractor** is a pure client-side web application for extracting audio tracks from video and audio files directly inside your browser. It converts media into **MP3 (128 kbps)** or uncompressed **WAV** using [FFmpeg.wasm](https://ffmpegwasm.netlify.app/) v0.12. 
 
 **Zero server upload**: all media processing occurs locally within your browser using WebAssembly. Your files never leave your device.
-
-Companion project: [StickerMaker](https://github.com/HengWeiBin/StickerMaker) (another zero-backend, privacy-centric web tool).
 
 ## ✨ Key Features
 
