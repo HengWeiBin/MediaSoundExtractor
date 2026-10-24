@@ -1,5 +1,30 @@
 # MEDIA PRO — MediaSoundExtractor
 
+<p align="center">
+  <img src="favicon.svg" alt="MEDIA PRO Logo" width="80" height="80">
+  <br>
+  <strong>🎬 瀏覽器本地音訊擷取與轉檔工具 (FFmpeg.wasm)</strong>
+  <br>
+  <span>100% 本地運算 · 零伺服器上傳 · 極速隱私 · 支援 MP3 (128k) / WAV 雙格式</span>
+</p>
+
+<p align="center">
+  <a href="https://mediasoundextractor.netlify.app/"><img src="https://img.shields.io/badge/Live%20App-Netlify-00C7B7?style=flat-square&logo=netlify" alt="Live App"></a>
+  <a href="https://hengweibin.github.io/MediaSoundExtractor/"><img src="https://img.shields.io/badge/Landing%20Page-GitHub%20Pages-222222?style=flat-square&logo=githubpages" alt="Landing Page"></a>
+  <a href="https://github.com/HengWeiBin/MediaSoundExtractor/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-3b82f6?style=flat-square" alt="Release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License"></a>
+</p>
+
+---
+
+### 🔗 快速連結
+
+- 🚀 **線上立即使用 (Live App - Netlify)**: [https://mediasoundextractor.netlify.app/](https://mediasoundextractor.netlify.app/)
+- 🌐 **產品介紹頁 (Landing Page - GitHub Pages)**: [https://hengweibin.github.io/MediaSoundExtractor/](https://hengweibin.github.io/MediaSoundExtractor/)
+- 💻 **GitHub 原始碼倉庫**: [https://github.com/HengWeiBin/MediaSoundExtractor](https://github.com/HengWeiBin/MediaSoundExtractor)
+
+---
+
 一個純前端的音訊擷取工具：把拖曳進來的影片 / 音訊檔轉成 **MP3 (128k)** 或 **WAV**。整個應用程式只有一個 `index.html`，完全在瀏覽器內透過 [FFmpeg.wasm](https://ffmpegwasm.netlify.app/) 完成轉檔——**檔案不會上傳到任何伺服器**。
 
 參考同系列專案：[StickerMaker](https://github.com/HengWeiBin/StickerMaker)（同樣是零後端的瀏覽器工具）。
@@ -69,4 +94,5 @@ netlify deploy --prod --dir .
 
 ## 📄 授權
 
-此專案僅供學習與個人使用。
+本專案採用 [MIT License](LICENSE) 授權。
+
