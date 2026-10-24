@@ -17,7 +17,7 @@
 <p align="center">
   <a href="https://mediasoundextractor.netlify.app/"><img src="https://img.shields.io/badge/Live%20App-Netlify-00C7B7?style=flat-square&logo=netlify" alt="Live App"></a>
   <a href="https://hengweibin.github.io/MediaSoundExtractor/"><img src="https://img.shields.io/badge/Landing%20Page-GitHub%20Pages-222222?style=flat-square&logo=githubpages" alt="Landing Page"></a>
-  <a href="https://github.com/HengWeiBin/MediaSoundExtractor/releases"><img src="https://img.shields.io/badge/Release-v1.1.0-3b82f6?style=flat-square" alt="Release"></a>
+  <a href="https://github.com/HengWeiBin/MediaSoundExtractor/releases"><img src="https://img.shields.io/badge/Release-v1.1.1-3b82f6?style=flat-square" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square" alt="License"></a>
 </p>
 
